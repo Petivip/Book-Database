@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body >
+
+<header >
+
+</header>
+
+<div class="slider"></div><!-- slider -->
+
+<section class="blog-area section">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6"  >
+                <div class="card h-100">
+
+                    <table>
+                        <tr>
+                            <th>SUK</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr th:each="book :${books}">
+                            <td th:text="${book.SKU}"></td>
+                            <td th:text="${book.title}"></td>
+                            <td th:text="${book.author}"></td>
+                            <td th:text="${book.description}"></td>
+                            <td th:text="${book.price}"></td>
+                        </tr>
+                    </table>
+
+
+                </div><!-- card -->
+            </div><!-- col-lg-4 col-md-6 -->
+
+
+        </div><!-- row -->
+
+
+
+    </div><!-- container -->
+</section><!-- section -->
+
+
+
+</body>
+</html>
